@@ -1,5 +1,18 @@
-import React from 'react';
-import { render } from 'react-dom';
-import { App } from './App';
+import { StrictMode } from "react";
+import ReactDOM from "react-dom/client";
+import { App } from "./App";
+import { ThemeContextProvider } from "./contexts/ThemeContext";
 
-render(<App/>, document.getElementById('root'));
+import "./styles/reset.scss";
+
+const root = ReactDOM.createRoot(
+  document.getElementById("root") as HTMLElement
+);
+
+root.render(
+  <StrictMode>
+    <ThemeContextProvider>
+      <App />
+    </ThemeContextProvider>
+  </StrictMode>
+);
