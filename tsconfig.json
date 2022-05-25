@@ -6,10 +6,15 @@
     "skipLibCheck": true,
     "outDir": "./dist/",
     "noImplicitAny": true,
-    "module": "es6",
-    "target": "es5",
-    "jsx": "react",
+    "jsx": "react-jsx",
     "allowJs": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "baseUrl": ".",
+    "paths": {
+      "~*": ["./*"]
+    }
   }
 }

@@ -1,0 +1,41 @@
+@import "../../styles/colors.scss";
+
+.container {
+  width: 100%;
+  border-radius: 0.7rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+
+  padding: 1rem 2rem;
+
+  box-shadow: 0.3rem 0.3rem 1rem rgba(0, 0, 0, 0.205);
+
+  transition: color 0.2s;
+  transition: background 0.2s;
+
+  a {
+    text-decoration: none;
+    color: $teal-600;
+    transition: filter 0.2s;
+
+    &:hover {
+      filter: brightness(1.4);
+    }
+  }
+
+  &.light {
+    border: 1px solid $neutral-500;
+    background: linear-gradient(to left, $neutral-200, $neutral-300);
+  }
+
+  &.dark {
+    border: 1px solid $neutral-500;
+    background: linear-gradient(to left, $neutral-700, $neutral-800);
+  }
+
+  @media (max-width: 30rem) {
+    padding: 0.5rem 1rem;
+  }
+}
