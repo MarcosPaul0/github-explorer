@@ -1,0 +1,51 @@
+@import "./colors.scss";
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  padding: 2rem 3rem;
+
+  transition: color 0.2s;
+  transition: background 0.2s;
+
+  form {
+    width: 100%;
+    max-width: 30rem;
+    display: flex;
+    gap: 0.8rem;
+  }
+
+  hr {
+    border: none;
+    height: 2px;
+    width: 100%;
+  }
+
+  &.light {
+    color: $neutral-900;
+    background: $neutral-100;
+
+    hr {
+      background: $neutral-500;
+    }
+  }
+
+  &.dark {
+    color: $neutral-100;
+    background: $neutral-900;
+
+    hr {
+      background: $neutral-300;
+    }
+  }
+
+  @media (max-width: 30rem) {
+    padding: 1rem 1rem;
+  }
+}
